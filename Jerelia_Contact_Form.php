@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Jerelia Contact Form Plugin
-Plugin URI: http://example.com
 Description: Simple Jerelia WordPress Contact Form
-Version: 1.0
+Version: 1.1
 Author: Ptichkin based on Agbonghama Collins
 Author URI: http://jerelia.com
+GitHub Plugin URI: https://github.com/jereliadev/Jerelia_WP_Contact_Form
 */
 
 
