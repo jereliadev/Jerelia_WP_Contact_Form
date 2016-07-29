@@ -48,7 +48,7 @@ function hero_mail() {
 
 		} else {
 			echo '<div>';
-			echo '<p class="warning">Щось пийшло не так :(</p>';
+			echo '<p class="warning">Щось пійшло не так :(</p>';
 			echo '</div>';
 		}
 	}
@@ -92,7 +92,7 @@ function call_mail() {
 			echo '</div>';
 		} else {
 			echo '<div>';
-			echo '<p class="warning">Щось пийшло не так :(</p>';
+			echo '<p class="warning">Щось пійшло не так :(</p>';
 			echo '</div>';
 		}
 	}
