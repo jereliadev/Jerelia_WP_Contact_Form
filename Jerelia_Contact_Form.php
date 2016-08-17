@@ -2,7 +2,7 @@
 /*
 Plugin Name: Jerelia Contact Form Plugin
 Description: Simple Jerelia WordPress Contact Form
-Version: 1.1
+Version: 1.2
 Author: Ptichkin based on Agbonghama Collins
 Author URI: http://jerelia.com
 GitHub Plugin URI: https://github.com/jereliadev/Jerelia_WP_Contact_Form
@@ -26,7 +26,7 @@ function hero_mail() {
 			$to,
 			$jerelia_admin_email
 		);
-		$email_text = get_theme_mod( 'email_letter_entry' );
+		$email_text = get_theme_mod( 'email_letter_entry', __( 'Доброго дня, друже!<br>Ласкаво просимо до дружної команди Jerelia! Ми працюємо в інтернеті та навчимо Вас усьому, що знаємо самі. У всіх нас єдина мета – гідне життя для себе та близьких.<br>Мета – одна, досягаємо РАЗОМ!<br>Наш девіз: «Лише допомагаючи заробити іншим – заробиш сам!», і це дійсно так.<br>Ми зацікавлени в Вашому успіху: чим більше Ви будете заробляти, тим швидше виростемо ми, а як результат – і наш прибуток. Впевнени, що наша з Вами співпраця буде довготривала та плідна.'), 'jerelia' );
 
 		// $headers = "From: $name <$email>" . "\r\n";
 		$headers = 'MIME-Version: 1.0' . "\r\n";
@@ -71,7 +71,7 @@ function call_mail() {
 			$to,
 			$jerelia_admin_email
 		);
-		$email_text = get_theme_mod( 'email_letter_entry' );
+		$email_text = get_theme_mod( 'email_letter_entry', __( 'Доброго дня, друже!<br>Ласкаво просимо до дружної команди Jerelia! Ми працюємо в інтернеті та навчимо Вас усьому, що знаємо самі. У всіх нас єдина мета – гідне життя для себе та близьких.<br>Мета – одна, досягаємо РАЗОМ!<br>Наш девіз: «Лише допомагаючи заробити іншим – заробиш сам!», і це дійсно так.<br>Ми зацікавлени в Вашому успіху: чим більше Ви будете заробляти, тим швидше виростемо ми, а як результат – і наш прибуток. Впевнени, що наша з Вами співпраця буде довготривала та плідна.'), 'jerelia' );
 
 		// $headers = "From: $name <$email>" . "\r\n";
 		$headers = 'MIME-Version: 1.0' . "\r\n";
