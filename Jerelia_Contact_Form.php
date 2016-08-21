@@ -2,18 +2,33 @@
 /*
 Plugin Name: Jerelia Contact Form Plugin
 Description: Simple Jerelia WordPress Contact Form
-Version: 1.2
+Version: 1.4
 Author: Ptichkin based on Agbonghama Collins
 Author URI: http://jerelia.com
 GitHub Plugin URI: https://github.com/jereliadev/Jerelia_WP_Contact_Form
 */
+
+require_once('class.postcontroller.php');
+
+$Poster = new PostController;
+
+$Poster->set_title( "Дякуємо Вам за звернення" );
+$Poster->set_type( "page" );
+$Poster->set_content( "Ласкаво просимо до дружної команди Jerelia! Ми працюємо в інтернеті та навчимо Вас усьому, що знаємо самі. У всіх нас єдина мета – гідне життя для себе та близьких.<br>Мета – одна, досягаємо РАЗОМ! Наш девіз: «Лише допомагаючи заробити іншим – заробиш сам!», і це дійсно так.<br>Я зацікавлена в Вашому успіху: чим більше Ви будете заробляти, тим швидше виросту я, а як результат – і мій прибуток. Впевнена, що наша з Вами співпраця буде довготривала та плідна." );
+// $Poster->set_author_id( 1 );
+$Poster->set_post_slug( 'subscription' );
+$Poster->set_page_template( "subscription-jerelia.php" );
+$Poster->set_post_state( "publish" );
+$Poster->create();
+
 
 
 function hero_mail() {
 
 	// if the submit button is clicked, send the email
 	if ( isset( $_POST['cf-submitted-h'] ) ) {
-
+		
+		$url = home_url(). '/subscription/';
 		// sanitize form values
 		$name    = sanitize_text_field( $_POST["cf-name"] );
 		$email   = sanitize_email( $_POST["cf-email"] );
@@ -42,9 +57,8 @@ function hero_mail() {
 		// If email has been process for sending, display a success message
 		if ( wp_mail( $multiple_to_recipients, "Ви отримали новий контакт c сайту ".  $blog_title, $body, $headers ) && wp_mail( $email, "Поздоровлення від ". $blog_title ." ", $body2, $headers ) )  {
 			$_POST=array();  
-			echo '<div>';
-			echo '<p class="warning">Дякуємо Вам за звернення, очікуйте відповіді найближчим часом.</p>';
-			echo '</div>';
+			die('<script type="text/javascript">window.location="'.$url.'";</script>');
+
 
 		} else {
 			echo '<div>';
@@ -58,7 +72,7 @@ function call_mail() {
 
 	// if the submit button is clicked, send the email
 	if ( isset( $_POST['cf-submitted-c'] ) ) {
-
+		$url = home_url(). '/subscription/';
 		// sanitize form values
 		$name    = sanitize_text_field( $_POST["cf-name"] );
 		$email   = sanitize_email( $_POST["cf-email"] );
@@ -87,9 +101,7 @@ function call_mail() {
 		// If email has been process for sending, display a success message
 		if ( wp_mail( $multiple_to_recipients, "Ви отримали новий контакт c сайту ".  $blog_title, $body, $headers ) && wp_mail( $email, "Поздоровлення від ". $blog_title ." ", $body2, $headers ) )  {
 			$_POST=array();  
-			echo '<div>';
-			echo '<p class="warning">Дякуємо Вам за звернення, очікуйте відповіді найближчим часом.</p>';
-			echo '</div>';
+			die('<script type="text/javascript">window.location="'.$url.'";</script>');
 		} else {
 			echo '<div>';
 			echo '<p class="warning">Щось пійшло не так :(</p>';
