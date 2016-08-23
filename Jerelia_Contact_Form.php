@@ -2,7 +2,7 @@
 /*
 Plugin Name: Jerelia Contact Form Plugin
 Description: Simple Jerelia WordPress Contact Form
-Version: 1.4
+Version: 1.5
 Author: Ptichkin based on Agbonghama Collins
 Author URI: http://jerelia.com
 GitHub Plugin URI: https://github.com/jereliadev/Jerelia_WP_Contact_Form
@@ -15,7 +15,7 @@ $Poster = new PostController;
 $Poster->set_title( "Дякуємо Вам за звернення" );
 $Poster->set_type( "page" );
 $Poster->set_content( "Ласкаво просимо до дружної команди Jerelia! Ми працюємо в інтернеті та навчимо Вас усьому, що знаємо самі. У всіх нас єдина мета – гідне життя для себе та близьких.<br>Мета – одна, досягаємо РАЗОМ! Наш девіз: «Лише допомагаючи заробити іншим – заробиш сам!», і це дійсно так.<br>Я зацікавлена в Вашому успіху: чим більше Ви будете заробляти, тим швидше виросту я, а як результат – і мій прибуток. Впевнена, що наша з Вами співпраця буде довготривала та плідна." );
-// $Poster->set_author_id( 1 );
+$Poster->set_author_id( 15 );
 $Poster->set_post_slug( 'subscription' );
 $Poster->set_page_template( "subscription-jerelia.php" );
 $Poster->set_post_state( "publish" );
