@@ -2,11 +2,7 @@
 /*
 Plugin Name: Jerelia Contact Form Plugin
 Description: Simple Jerelia WordPress Contact Form
-<<<<<<< HEAD
 Version: 1.6
-=======
-Version: 1.5
->>>>>>> origin/master
 Author: Ptichkin based on Agbonghama Collins
 Author URI: http://jerelia.com
 GitHub Plugin URI: https://github.com/jereliadev/Jerelia_WP_Contact_Form
